@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simon game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet">
+</head>
+<body>
+	<div class="main-container">
+		<div class="header">
+			<span>SIMON GAME</span>
+		</div>
+		<div class="controls">
+			<div class="control-text" id="display">
+				<span id="dispText">88</span>
+			</div>
+			<div class="control-text">
+				<span class="controlButs" id="powerBut" onclick="powerClick()">POWER</span>
+				<div class="light" id="powerLight"></div>
+			</div>
+			<div class="control-text">
+				<span class="controlButs" id="startBut" onclick="startClick()">START</span>
+				<div class="light" id="startLight"></div>
+			</div>
+			<div class="control-text">
+				<span class="controlButs" id="resetBut" onclick="resetClick()">RESET</span>
+				<div class="light" id="resetLight"></div>
+			</div>
+			<div class="control-text">
+				<span class="controlButs" id="strictBut" onclick="strictClick()">STRICT</span>
+				<div class="light" id="strictLight"></div>
+			</div>
+			<div class="control-text controlButs" id="instrBut" onclick="instrClick()">INSTRUCTIONS</div>
+		</div>
+		<div class="buttons">
+			<button id="redBut" class="soundButs" onmousedown="redButFunc()"></button>
+			<button id="blueBut" class="soundButs" onmousedown="blueButFunc()"></button>
+			<button id="greenBut" class="soundButs" onmousedown="greenButFunc()"></button>
+			<button id="yellowBut" class="soundButs" onmousedown="yellowButFunc()"></button>
+		</div>
+	</div>
+	<div class="instructions" id="instrModal">
+		<div class="instr-content">
+			<span>Repeat the sequence played by the computer.</span><br/>
+			<span>In strict mode, every mistake takes you back to the beginning.</span><br/>
+			<button class="modalBut" onclick="gotItClick()">Got it!</button>
+		</div>
+	</div>
+	<div class="winScreen" id="winModal">
+		<div class="win-content">
+			<span>Congratulations! You've finished level 20!</span><br/> 
+			<span>Consider yourself a Simon game Champion!</span>
+			<button class="winBut" onclick="winClick()">Start again!</button>
+		</div>
+	</div>
+	<div id="signature">
+		<span><a href="https://www.linkedin.com/in/sebastian-wyrebek/" target="_blank">by SWY</a></span>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
